@@ -1,0 +1,2 @@
+This is a blog platform that is supposed to be listening on a Tor hidden service for files in the
+Markdown format and convert these into html and post as a blogpost on a homepage in vanilla internet
