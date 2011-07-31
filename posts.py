@@ -1,17 +1,30 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
-import markdown
+from markdown import *
+from model import *
 
 class Post:
 	"""Class to make the posts into objects"""
-	def __init__(self, path_to_post):
-		self._path_to_post = path_to_post
-		self._f = open(self._path_to_post, 'r')
-		self.text = self._f.read()
+	def __init__(self):
+		setup_all()
+		self._posts = Posts.query.all()
+		self._titles = []
+		self._bodies = []
+		for post in self._posts:
+			self._titles.append(post.title)
+			self._bodies.append(post.body)
+		print self._titles, type(self._titles)
+		print self._bodies, type(self._bodies)
+		print self._posts, type(self._posts)
 			
-	def markdown(self):
-		return self.text
+	def markdown_titles(self):
+		return self._titles
 		
-	def html(self):
-		self.html = markdown.markdown(self.text)
-		return self.html
+	def html_titles(self):
+		return markdown(title)
+
+	def markdown_bodies(self):
+		return self._bodies
+
+	def html_bodies(self):
+		return markdown(body)
