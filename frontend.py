@@ -1,21 +1,24 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 import web
-import posts
+from posts_object import *
 
-urls = ('/(.*)', 'routing')
+urls = ('/', 'index'
+	'/post/(.*)', 'posts')
 render = web.template.render('templates/')
 web_frontend = web.application(urls, globals())
 
 if __name__ == "__main__":
 	web_frontend.run()
 
-class routing:
+class index:
 	"""The function that routes what goes where"""
-	def GET(self, name):
-		if name == 'posts':
-			post = posts.Post('/home/test/source/lulz/markdown/test.markdown')
-			html_post = post.html()
-			return html_post
-		else:
-			return render.index()
+	def GET(self):
+		post_obj = Post_Object()
+		return render.index(post_obj.raw_titles())
+
+class posts:
+	"""The function to display posts"""
+
+	def GET(self, id):
+		
