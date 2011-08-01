@@ -14,11 +14,13 @@ if __name__ == "__main__":
 class index:
 	"""The function that routes what goes where"""
 	def GET(self):
-		post_obj = Post_Object()
-		return render.index(post_obj.raw_titles())
+		posts_obj = Post_Object()
+		return render.index(posts_obj.raw_dict())
 
 class posts:
 	"""The function to display posts"""
 
-	def GET(self, id):
+	def GET(self, pid):
+		post_obj = Post_Object(pid)
+		return render.post(post_obj.raw_list())
 		
