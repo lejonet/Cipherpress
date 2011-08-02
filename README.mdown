@@ -12,3 +12,8 @@ The rest of it is my code :)
 
 [1]: http://webpy.org/						"Web.py's homepage"
 [2]: http://www.freewisdom.org/projects/python-markdown/	"Python Markdown's homepage"
+
+## State
+At the moment it is just in it's cradle, the pieces of code I have put together so far is only a small Proof of Concept I 
+am making for the CCCamp 2011. 
+Many of the final details when this all is "production ready" might change.
