@@ -1,0 +1,14 @@
+# The blog project
+This is a blog platform that is supposed to be listening on a Tor hidden service for files in the
+Markdown format and convert these into html and post as a blogpost on a homepage in vanilla internet
+
+## Idea
+To let people in areas with alot of censorship and filtering to share their thoughts and information
+in a manner that anonymizes their posting to this blog but still get the information out
+
+## Parts used in the project
+I have used the [web.py] [1] for the webserver bits, [Python Markdown] [2] by Manfred Stienstra and others.
+The rest of it is my code :)
+
+[1]: http://webpy.org/						"Web.py's homepage"
+[2]: http://www.freewisdom.org/projects/python-markdown/	"Python Markdown's homepage"
