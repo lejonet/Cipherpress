@@ -10,18 +10,18 @@ class Post_Object:
 		setup_all()
 		if (pid):
 			self._db_post = DB_Posts.query.filter_by(id=pid).one()
-			self._title = self._db_post.title
-			self._body = self._db_post.body
-			self._pid   = self._db_post.id
+			self._title   = self._db_post.title
+			self._body    = self._db_post.body
+			self._pid     = self._db_post.id
 		else:
-			self._db_posts = DB_Posts.query.all()			
+			self._db_posts = DB_Posts.query.all()
+			self._pids   = []
 			self._titles = []
 			self._bodies = []
-			self._pids   = []
-			for post in self._db_posts:
-				self._pids.append(post.id)
-				self._titles.append(post.title)
-				self._bodies.append(post.body)
+			for row in self._db_posts:
+				self._pids.append(row.id) 
+				self._titles.append(row.title)
+				self._bodies.append(row.body)
 			
 	def raw_titles(self):
 		if (self._pid):
@@ -58,14 +58,7 @@ class Post_Object:
 			self._list = [ self._pid, self._title, self._body ]
 			return self._list
 		else:
-			return None
-
-	def raw_dict(self):
-		if (self._pid == False):
-			self._dict = { 'pids': self._pids, 'titles': self._titles, 'bodies': self._bodies }
-			return self._dict
-		else:
-			return None
+			return self._db_posts
 
 	def html_list(self):
 		if (self._pid):
@@ -74,12 +67,3 @@ class Post_Object:
 		else:
 			return None
 
-	def html_dict(self):
-		if (self._pid == False):
-			self._titles = self.html_titles()
-			self._bodies = self.html_bodies()
-			self._dict = { 'pids': self._pids, 'titles': self._titles, 'bodies': self._bodies }
-			return self._dict
-		else:
-			return None
-		
