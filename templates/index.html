@@ -1,7 +1,15 @@
-$def with ()
-
+$def with (post_titles)
+<html>
+<head>
+</head>
+<body>
 <p>
 <em>Hell</em>o world!
 This is just a placeholder.
 </p>
-
+<ul>
+$for item in post_titles:
+    <li><a href="/post/$item.id">$item.title</a></li>
+</ul>
+</body>
+</html>
