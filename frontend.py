@@ -42,6 +42,7 @@ class submit:
 			safe_body  = s['body'].value.replace('<', '&lt;')
 			setup_all()
 			DB_Posts(title=safe_title,body=safe_body)
+#			DB_Posts(title=s['title'].value,body=s['body'].value)
 			session.commit()
 			return "Success!\nPOST title: %s %s POST body: %s %s" % (s['title'].value,type(s['title'].value),s['body'].value,type(s['body'].value))
 		else:
