@@ -5,8 +5,12 @@ $def with (form)
 </head>
 <body>
 <form name="submit" method="post">
+<fieldset>
 <legend>Submit form</legend>
+$if not form.valid: 
+    <p>Trolololol! You failed</p>
 $:form.render()
+</fieldset>
 </form>
 </body>
 </html>

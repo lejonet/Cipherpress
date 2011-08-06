@@ -3,6 +3,7 @@
 import web
 from web import form
 from posts_object import *
+from model import *
 
 urls = ('/', 'index',
 	'/post/(.*)', 'posts',
@@ -35,4 +36,15 @@ class submit:
 		s = submit_form()
 		return render.submit(s)
 	def POST(self):
-		pass
+		s = submit_form()
+		if s.validates():
+			safe_title = s['title'].value.replace('<', '&lt;')
+			safe_body  = s['body'].value.replace('<', '&lt;')
+			setup_all()
+			DB_Posts(title=safe_title,body=safe_body)
+			session.commit()
+			return "Success!\nPOST title: %s %s POST body: %s %s" % (s['title'].value,type(s['title'].value),s['body'].value,type(s['body'].value))
+		else:
+			return render.submit(s)
+			
+
