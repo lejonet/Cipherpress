@@ -17,3 +17,6 @@ The rest of it is my code :)
 At the moment it is just in it's cradle, the pieces of code I have put together so far is only a small Proof of Concept I 
 am making for the CCCamp 2011. 
 Many of the final details when this all is "production ready" might change.
+
+## License
+I am releasing everything under the GPLv2 license, feel free to copy, fork, improve or just look at the code.
