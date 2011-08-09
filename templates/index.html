@@ -7,6 +7,7 @@ $def with (post_titles)
   <body>
     <div id="content">
       <div id="header">
+	<img src="/static/telecomix.png" width="200px" height="200px" />
 	<p>
 	  <em>Hell</em>o world!
 	  This is just a placeholder.
@@ -15,7 +16,7 @@ $def with (post_titles)
       <div id="body">
 	<ul>
 	  $for item in post_titles:
-              <li><a href="/post/$item.id">$item.title</a></li>
+              <li><a href="/post/$item.id">$item.title.replace('#\s', '')</a></li>
 	</ul>
       </div>
     </div>
