@@ -1,24 +1,24 @@
 $def with (form)
 <html>
-<head>
-<link rel="stylesheet" type="text/html" href="/static/style.css" />
-<title>Blog - Submit Form</title>
-</head>
-<body>
-<div id="content">
-<div id="header">
-This is a submit form for the anonymous blog platform. It accepts normal text but is designed to be used with the Markdown syntax
-</div>
-<div id="body">
-<form name="submit" method="post">
-<fieldset>
-<legend>Submit form</legend>
-$if not form.valid: 
-    <p>Trolololol! You failed</p>
-$:form.render()
-</fieldset>
-</form>
-</div>
-</div>
-</body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <title>Blog - Submit Form</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+	This is a submit form for the anonymous blog platform. It accepts normal text but is designed to be used with the Markdown syntax
+      </div>
+      <div id="body">
+	<form name="submit" method="post">
+	  <fieldset>
+	    <legend>Submit form</legend>
+	    $if not form.valid: 
+	        <p>Trolololol! You failed</p>
+	    $:form.render()
+	  </fieldset>
+	</form>
+      </div>
+    </div>
+  </body>
 </html>

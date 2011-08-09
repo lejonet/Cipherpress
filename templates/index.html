@@ -1,23 +1,23 @@
 $def with (post_titles)
 <html>
-<head>
-<link rel="stylesheet" type="text/html" href="/static/style.css" />
-<title>Blog - Index</title>
-</head>
-<body>
-<div id="content">
-<div id="header">
-<p>
-<em>Hell</em>o world!
-This is just a placeholder.
-</p>
-</div>
-<div id="body">
-<ul>
-$for item in post_titles:
-    <li><a href="/post/$item.id">$item.title</a></li>
-</ul>
-</div>
-</div>
-</body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <title>Blog - Index</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="header">
+	<p>
+	  <em>Hell</em>o world!
+	  This is just a placeholder.
+	</p>
+      </div>
+      <div id="body">
+	<ul>
+	  $for item in post_titles:
+              <li><a href="/post/$item.id">$item.title</a></li>
+	</ul>
+      </div>
+    </div>
+  </body>
 </html>
