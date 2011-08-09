@@ -3,13 +3,19 @@ $def with (post_titles)
 <head>
 </head>
 <body>
+<div id="content">
+<div id="header">
 <p>
 <em>Hell</em>o world!
 This is just a placeholder.
 </p>
+</div>
+<div id="list">
 <ul>
 $for item in post_titles:
     <li><a href="/post/$item.id">$item.title</a></li>
 </ul>
+</div>
+</div>
 </body>
 </html>

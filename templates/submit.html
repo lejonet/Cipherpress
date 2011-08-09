@@ -4,6 +4,11 @@ $def with (form)
 <head>
 </head>
 <body>
+<div id="content">
+<div id="header">
+This is a submit form for the anonymous blog platform. It accepts normal text but is designed to be used with the Markdown syntax
+</div>
+<div id="submit_form">
 <form name="submit" method="post">
 <fieldset>
 <legend>Submit form</legend>
@@ -12,5 +17,7 @@ $if not form.valid:
 $:form.render()
 </fieldset>
 </form>
+</div>
+</div>
 </body>
 </html>
