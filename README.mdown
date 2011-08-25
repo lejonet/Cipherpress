@@ -21,4 +21,4 @@ Many of the final details when this all is "production ready" might change.
 
 ## License
 I am releasing everything under the GPLv2 license, feel free to copy, fork, improve or just look at the code.
-If you like the project, forked/copied some of it or just generally want to drop me a note you can do so at enhaisa@gmail.com
+If you like the project, forked/copied some of it or just generally want to drop me a note you can do so at daniel@kuehn.se

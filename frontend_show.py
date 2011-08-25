@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-# Blog Frontend - A simple frontend for the blog platform, shows a list of posts, individual posts and enables submitting posts
+# Cipherpress Show Frontend - A simple show frontend for Cipherpress, shows a list of posts and individual posts
 # Copyright (C) 2011 Daniel Kuehn <daniel@kuehn.se>
 #
 # This program is free software; you can redistribute it and/or modify
