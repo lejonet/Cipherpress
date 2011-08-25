@@ -1,4 +1,4 @@
-# The blog project
+# Cipherpress (Formelly known as The blog project)
 This is a blog platform that is supposed to be listening on a Tor hidden service for files in the
 Markdown format and convert these into html and post as a blogpost on a homepage in vanilla internet
 
@@ -21,3 +21,4 @@ Many of the final details when this all is "production ready" might change.
 
 ## License
 I am releasing everything under the GPLv2 license, feel free to copy, fork, improve or just look at the code.
+If you like the project, forked/copied some of it or just generally want to drop me a note you can do so at enhaisa@gmail.com
