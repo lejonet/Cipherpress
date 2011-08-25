@@ -18,6 +18,7 @@ $def with (form)
 	    <legend>Submit form</legend>
 	    $if not form.valid: 
 	        <p>Trolololol! You failed</p>
+	    <input type="hidden" name="csrf_token" value="$csrf_token()" />
 	    $:form.render()
 	  </fieldset>
 	</form>
